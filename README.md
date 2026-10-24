@@ -119,4 +119,6 @@ http://localhost:3000
 [Explore Aurelia Archive](https://aurelia-archive.vercel.app/)
 ---
 
-Made with love, Kash ❤️
+## Author
+
+Kashish Srivastava
