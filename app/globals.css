@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Midnight blues */
+  --color-midnight-950: #060913;
+  --color-midnight-900: #0b1026;
+  --color-midnight-800: #131a3a;
+  --color-midnight-700: #1d2652;
+
+  /* Gold */
+  --color-gold-300: #f3dc9b;
+  --color-gold-400: #e3b95c;
+  --color-gold-500: #d4a94f;
+
+  /* Parchment */
+  --color-parchment-100: #f4e9cc;
+  --color-parchment-200: #e9d9ab;
+
+  /* Antique wood */
+  --color-wood-900: #1f130b;
+  --color-wood-800: #35200f;
+  --color-wood-700: #4d2f17;
+
+  /* Room accents */
+  --color-ember: #ff9a3c;
+  --color-silver: #b9c3e0;
+  --color-moss: #7fa66a;
+
+  /* Fonts (set up in layout.js) */
+  --font-display: var(--font-cinzel);
+  --font-serif: var(--font-cormorant);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-midnight-950);
+  color: var(--color-parchment-100);
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: 1.125rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-gold-500);
+  color: var(--color-midnight-950);
+}
+
+/* Reusable looks */
+.text-glow {
+  text-shadow: 0 0 12px rgb(227 185 92 / 0.55), 0 0 32px rgb(227 185 92 / 0.25);
+}
+
+.glass-panel {
+  background: rgb(8 12 30 / 0.65);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgb(227 185 92 / 0.22);
+  box-shadow: 0 8px 40px rgb(0 0 0 / 0.45);
+}
+
+.parchment-card {
+  background: linear-gradient(160deg, #f4e9cc, #e2cf9c);
+  color: var(--color-wood-900);
+  box-shadow: inset 0 0 40px rgb(120 80 30 / 0.25), 0 6px 24px rgb(0 0 0 / 0.4);
+}
+
+/* Respect people who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
